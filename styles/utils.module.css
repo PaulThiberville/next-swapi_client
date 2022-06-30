@@ -1,3 +1,10 @@
+.horizontalContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -49,4 +56,15 @@
 
 .lightText {
   color: #666;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.textArea {
+  width: 80%;
 }
