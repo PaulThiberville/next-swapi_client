@@ -1,10 +1,8 @@
 export default function Review({ review }) {
   return (
     <>
-      <p>
-        <strong>Comment: </strong>
-        {review.comment}
-      </p>
+      <h2>{review.name}</h2>
+      <p>{review.comment}</p>
       <p>
         <strong>Rating: </strong>
         {review.rating}
