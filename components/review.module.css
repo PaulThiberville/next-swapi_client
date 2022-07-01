@@ -1,0 +1,15 @@
+.container {
+  border-left: 10px solid silver;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  padding-left: 20px;
+}

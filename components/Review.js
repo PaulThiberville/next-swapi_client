@@ -1,12 +1,13 @@
+import styles from "./review.module.css";
+
 export default function Review({ review }) {
   return (
-    <>
-      <h2>{review.name}</h2>
-      <p>{review.comment}</p>
-      <p>
-        <strong>Rating: </strong>
-        {review.rating}
-      </p>
-    </>
+    <div className={styles.container}>
+      <div className={styles.heading}>
+        <h3>{review.name}</h3>
+        <p>{review.rating}/5</p>
+      </div>
+      <p className={styles.content}>{review.comment}</p>
+    </div>
   );
 }

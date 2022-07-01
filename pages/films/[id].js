@@ -90,11 +90,26 @@ export default function Film({ filmData }) {
       <h2>{"Add a Review"}</h2>
       <form className={utilStyles.form}>
         <div>
-          <h3>Your name :</h3>
-          <input
-            type={"text"}
-            onChange={(e) => setName(e.target.value)}
-          ></input>
+          <div className={utilStyles.horizontalContainer}>
+            <h3>Your name :</h3>
+            <input
+              type={"text"}
+              onChange={(e) => setName(e.target.value)}
+            ></input>
+            <h3>Your rate :</h3>
+            <select
+              onChange={(e) => setRating(e.target.value)}
+              value={rating}
+              className={utilStyles.select}
+            >
+              <option value="">rate</option>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+              <option value={4}>4</option>
+              <option value={5}>5</option>
+            </select>
+          </div>
           <h3>Your comment :</h3>
           <textarea
             onChange={(e) => setComment(e.target.value)}
@@ -102,19 +117,6 @@ export default function Film({ filmData }) {
             className={utilStyles.textArea}
             rows="5"
           ></textarea>
-          <h3>Your rate :</h3>
-          <select
-            onChange={(e) => setRating(e.target.value)}
-            value={rating}
-            className={utilStyles.select}
-          >
-            <option value="">rate</option>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-            <option value={4}>4</option>
-            <option value={5}>5</option>
-          </select>
         </div>
         <button onClick={(e) => handleAddReview(e)}>Add Review</button>
       </form>
